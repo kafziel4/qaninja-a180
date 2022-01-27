@@ -1,0 +1,35 @@
+---
+- title: senha invalida
+  payload:
+    email: gabriela@gmail.com
+    password: abc123
+  code: 401
+  error: Unauthorized
+- title: usuario nao existe
+  payload:
+    email: gabi@gmail.com
+    password: pwd123
+  code: 401
+  error: Unauthorized
+- title: email em branco
+  payload:
+    email: ''
+    password: pwd123
+  code: 412
+  error: required email
+- title: sem o campo email
+  payload:
+    password: pwd123
+  code: 412
+  error: required email
+- title: senha em branco
+  payload:
+    email: gabriela@gmail.com
+    password: ''
+  code: 412
+  error: required password
+- title: sem o campo senha
+  payload:
+    email: gabriela@gmail.com
+  code: 412
+  error: required password
